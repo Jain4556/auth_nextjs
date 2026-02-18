@@ -1,5 +1,4 @@
 "use client"
-
 import axios from "axios"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
@@ -24,8 +23,7 @@ export default function VerifyEmailPage() {
     }
 
     useEffect(() => {
-        const urlToken = window.location.search.split("=")[1];
-
+        const urlToken = window.location.search.split("=")[1];  
         setToken(urlToken || "")
     }, [])
 
@@ -49,14 +47,13 @@ export default function VerifyEmailPage() {
                     <h2 className="text-2xl">
                         Verified
                     </h2>
-
-
                     <Link href="/login">
                        Login
                     </Link>
 
                 </div>
             )}
+            
 
               {error && (
                 <div>
